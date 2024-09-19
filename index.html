@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <h1>JC STORE</h1>
+        <button onclick="filterByPrice('asc')">Ordenar por Precio (Ascendente)</button>
+        <button onclick="filterByPrice('desc')">Ordenar por Precio (Descendente)</button>
+        <select id="categoryFilter" onchange="filterByCategory(this.value)">
+            <option value="">Filtrar por Categoría</option>
+            <option value="electronics">Electrónica</option>
+            <option value="jewelery">Joyería</option>
+            <option value="men's clothing">Ropa de Hombre</option>
+            <option value="women's clothing">Ropa de Mujer</option>
+        </select>
+        <i class="bx bx-shopping-bag" id="cart-icon" onclick="toggleCart()"></i>
+    </header>
+
+    <main>
+        <div id="products-section"></div>
+        <aside class="cart" id="cart-sidebar">
+            <button class="close-cart" onclick="toggleCart()">X</button>
+            <h2 class="cart-title">Tu carrito</h2>
+            <div id="cart-container"></div>
+            <div id="total-price"></div>
+            <button id="checkout-button">Comprar Ahora</button>
+        </aside>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
